@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_app/page_one.dart';
 import 'package:provider_app/provider/provider_model.dart';
+
+import 'screens/page_one/page_one.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => NumberProvider())
       ],
       child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: PageOne(),
       ),
     );
