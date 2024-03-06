@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
 
 class NumberProvider extends ChangeNotifier {
-  int number = 15;
+  int number = 0;
 
   increaseNumber() {
-    number += 2;
+    number += 1;
+
     notifyListeners();
   }
 
   decreaseNumber() {
     number--;
+    notifyListeners();
+  }
+
+  updateNumber(int numberNew) {
+    number = numberNew;
     notifyListeners();
   }
 }
